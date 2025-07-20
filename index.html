@@ -1,215 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junjie Wu - Professional Profile</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 20px;
-        }
-        h1 {
-            color: #2c3e50;
-            margin: 0;
-        }
-        .tagline {
-            font-style: italic;
-            color: #7f8c8d;
-        }
-        h2 {
-            color: #3498db;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .education-item, .work-item {
-            margin-bottom: 20px;
-        }
-        .institution, .position {
-            font-weight: bold;
-        }
-        .date {
-            color: #7f8c8d;
-            font-size: 0.9em;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill {
-            background-color: #e0f7fa;
-            padding: 5px 10px;
-            border-radius: 3px;
-        }
-        .contact-info {
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        a {
-            color: #2980b9;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #3498db;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Junjie Wu - CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .contact p, .skills p {
+      margin: 5px 0;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div>
-            <h1>Junjie Wu</h1>
-            <p class="tagline">Life is just a game of chess ♟️</p>
-            <p>Nearly graduated Master's degree student writing his thesis this spring.<br>
-            Native speaker of English.</p>
-        </div>
-        <img src="junjie.jpg" alt="Junjie Wu" class="profile-img">
-    </header>
+  <div class="container">
+    <h1>Junjie Wu</h1>
+    <p>A recent Master’s degree graduate especially interested in research and automation.</p>
 
-    <div class="section">
-        <h2>Education</h2>
-        <div class="education-item">
-            <div class="institution">Stockholm University</div>
-            <div>Master of Science in Business Administration: Management, Organization, and Society</div>
-            <div class="date">2023-2025 | Stockholm, Sweden</div>
-            <div>Thesis Title: Politics, Leadership, and Factors that Drive Financial Performance in Business Organizations</div>
-            <div>Courses: Management Theory and Analysis, Entrepreneurship and Entrepreneurial Self, Business and Society, Cross-Cultural Management and Leadership in a Globalized World, Managing Human Resources, Power and Resistance in Organizations, Advanced Research Methods in Management, Leadership and Management in Organizations.</div>
-        </div>
-        
-        <div class="education-item">
-            <div class="institution">Hanken School of Economics</div>
-            <div>Master of Business (Exchange Semester)</div>
-            <div>Courses in Finance and Accounting</div>
-            <div class="date">Helsinki, Finland</div>
-            <div>Courses: Finance: Strategic Growth Investing. Accounting: Financial Statement Analysis and Valuation.</div>
-        </div>
-        
-        <div class="education-item">
-            <div class="institution">University of Miami</div>
-            <div>Bachelor of Science in Government, Minor in Mathematics</div>
-            <div>GPA: 3.71/4.00 | Departmental Honors</div>
-            <div class="date">Miami, USA</div>
-            <div>Math courses: Linear Algebra, Multivariate Calculus, Discrete Math</div>
-        </div>
-        
-        <div class="education-item">
-            <div class="institution">Baltimore Polytechnic Institute</div>
-            <div>High School | GPA: 4.00/4.00</div>
-            <div class="date">Baltimore, MD, USA</div>
-        </div>
+    <div class="section contact">
+      <h2>Contact Information</h2>
+      <p>Address: Rubiinikehä 4A 22, 01700, Vantaa, Finland</p>
+      <p>Phone: (+358 0) 403601026</p>
+      <p>Email: <a href="mailto:junjiew10@gmail.com">junjiew10@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/JunjieWu100/Junjie" target="_blank">github.com/JunjieWu100</a></p>
+      <p>Website: <a href="https://junjiewu100.github.io/" target="_blank">junjiewu100.github.io</a></p>
     </div>
 
     <div class="section">
-        <h2>Work Experience</h2>
-        <div class="work-item">
-            <div class="position">Support Associate - Wolt Enterprises Oy</div>
-            <div class="date">2023/6 - 2024/1</div>
-            <ul>
-                <li>Customer service, multitasking</li>
-                <li>Top 3 daily ticket completion rates in a 400+ person team</li>
-                <li>Optimized for ticket response time and CSAT</li>
-            </ul>
-        </div>
-        
-        <div class="work-item">
-            <div class="position">Administrative and IT Assistant - University of Helsinki</div>
-            <div class="date">1 year (as part of Siviilipalvelus)</div>
-        </div>
-        
-        <div class="work-item">
-            <div class="position">Sales Associate - Phone sales at various firms in Helsinki</div>
-            <div class="date">6 months</div>
-            <ul>
-                <li>Utilized analytics to improve performance</li>
-            </ul>
-        </div>
-        
-        <div class="work-item">
-            <div class="position">Quantitative Analyst (Sports Betting/Poker Hobbyist)</div>
-            <div class="date">11 years</div>
-            <ul>
-                <li>Quantitative risk analysis and probability-based decision-making under uncertainty</li>
-            </ul>
-        </div>
+      <h2>Professional Interests</h2>
+      <p>AI, Automation, Finance, Accounting, Social Work, HR, Economics, Data Science, Analytics</p>
     </div>
 
     <div class="section">
-        <h2>Hobbies</h2>
-        <div>
-            <h3>Investment</h3>
-            <p>Implementing lessons from investment courses to evaluate the fit of companies for investment purposes.</p>
-            
-            <h3>Sports Betting</h3>
-            <ul>
-                <li>Process intensified around 2015 for the first time</li>
-                <li>Model with Excel various phenomena such as using Poisson distribution to estimate probabilities and fair odds for over/under goals in matches</li>
-                <li>Accurate xG estimations crucial for this process</li>
-                <li>Most of the bets placed include back and lay bets of in-play football events</li>
-                <li>Winning record past 12 months</li>
-                <li>Sportsbooks in use include Betfair Exchange and Pinnacle</li>
-            </ul>
-            
-            <p>Table tennis player, around rank 300 in Finland.</p>
-            <p>Also enjoy writing poems in my freetime.</p>
-        </div>
+      <h2>Professional Positions</h2>
+      <p><strong>Since 06/2025</strong> – Founder, Independent Research Consulting</p>
     </div>
 
     <div class="section">
-        <h2>Languages</h2>
-        <p>Finnish (5/5), English (5/5), Chinese (4/5), French (3/5)</p>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>09/2023 - 06/2025</strong> – Master of Science in Management, Stockholm University</li>
+        <li><strong>09/2024 - 12/2024</strong> – Exchange Semester, Finance & Accounting, Hanken School of Economics</li>
+        <li><strong>08/2011 - 12/2014</strong> – Bachelor of Science in Government, Minor in Mathematics, University of Miami</li>
+      </ul>
     </div>
 
     <div class="section">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill">Excel</div>
-            <div class="skill">PowerPoint</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">Quantitative Analysis</div>
-            <div class="skill">Financial Modeling</div>
-            <div class="skill">Data Analysis</div>
-        </div>
+      <h2>Previous Positions</h2>
+      <ul>
+        <li><strong>06/2023 - 01/2024</strong> – Support Associate, Wolt Enterprises Oy</li>
+        <li><strong>06/2021 - 01/2022</strong> – Sales Associate, Various Companies</li>
+        <li><strong>01/2016 - 01/2017</strong> – Civilian Service, University of Helsinki, Faculty of Law</li>
+      </ul>
     </div>
 
     <div class="section">
-        <h2>Recommender</h2>
-        <p>Krista Salo<br>
-        Monitoring Team Lead, Wolt Oy<br>
-        <a href="mailto:krista.salo@wolt.com">krista.salo@wolt.com</a></p>
+      <h2>Academic Interests</h2>
+      <p>Economics, Business, Political Science, Data Science, Analytics, Sovereignty</p>
     </div>
 
-    <div class="section contact-info">
-        <h2>Contact Information</h2>
-        <p>Junjie Wu<br>
-        Born: 18.01.1991<br>
-        Email: <a href="mailto:junjie.wu91@icloud.com">junjie.wu91@icloud.com</a><br>
-        Phone: +358403601026</p>
+    <div class="section">
+      <h2>Volunteering Experience</h2>
+      <ul>
+        <li><strong>06/2012 - 07/2013</strong> – Summer Scholars Program, University of Miami</li>
+        <li><strong>08/2008 - 05/2010</strong> – National Honor Society, Baltimore Polytechnic Institute</li>
+      </ul>
     </div>
+
+    <div class="section">
+      <h2>Further Education</h2>
+      <ul>
+        <li><strong>09/2019 - 06/2021</strong> – MSc in Management (Courses), Aalto University & Stockholm University</li>
+        <li><strong>08/2018 - 05/2019</strong> – MSc in Sociology, University of Helsinki</li>
+      </ul>
+    </div>
+
+    <div class="section skills">
+      <h2>Further Skills</h2>
+      <p><strong>Languages:</strong> English (Native), Finnish (Native), Chinese (Fluent), French (Basic)</p>
+      <p><strong>Expertise:</strong> MS Office, ChatGPT, AutoGPT, Python, NumPy, Azure, PearAI, Replit, Envato</p>
+      <p><strong>AI Experience:</strong> Hands-on expertise in generative AI technologies, LLMs, image generation & customization solutions</p>
+    </div>
+
+    <div class="section">
+      <h2>Recommendations</h2>
+      <ul>
+        <li><strong>Krista Salo</strong> – Monitoring Team Lead, Wolt<br>Email: krista.salo@wolt.com</li>
+        <li><strong>Resti Montoya Moreno</strong> – Senior Antenna Engineer, Huawei<br>Phone: +358409626406<br>Email: restimontoya7@gmail.com</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
