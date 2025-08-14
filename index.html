@@ -1,117 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Junjie Wu - CV</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f4f4f4;
-      color: #333;
-    }
-    .container {
-      background: white;
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-      margin-top: 40px;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .contact p, .skills p {
-      margin: 5px 0;
-    }
-    .section {
-      margin-bottom: 30px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Business Game</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Junjie Wu</h1>
-    <p>A recent Master’s degree graduate especially interested in research and automation.</p>
+<h1>Business Simulation Game</h1>
 
-    <div class="section contact">
-      <h2>Contact Information</h2>
-      <p>Address: Rubiinikehä 4A 22, 01700, Vantaa, Finland</p>
-      <p>Phone: (+358 0) 403601026</p>
-      <p>Email: <a href="mailto:junjiew10@gmail.com">junjiew10@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/JunjieWu100/Junjie" target="_blank">github.com/JunjieWu100</a></p>
-      <p>Website: <a href="https://junjiewu100.github.io/" target="_blank">junjiewu100.github.io</a></p>
-    </div>
+<form id="game-form">
+    <label>NA Price: <input type="number" name="na_price" required></label><br>
+    <label>EU Price: <input type="number" name="eu_price" required></label><br>
+    <label>APAC Price: <input type="number" name="apac_price" required></label><br>
+    <label>NA Marketing: <input type="number" name="na_mkt" required></label><br>
+    <label>EU Marketing: <input type="number" name="eu_mkt" required></label><br>
+    <label>APAC Marketing: <input type="number" name="apac_mkt" required></label><br>
+    <label>R&D: <input type="number" name="rd" required></label><br>
+    <label>HR: <input type="number" name="hr" required></label><br>
+    <label>NA Allocation: <input type="number" name="na_alloc" required></label><br>
+    <label>EU Allocation: <input type="number" name="eu_alloc" required></label><br>
+    <label>APAC Allocation: <input type="number" name="apac_alloc" required></label><br>
+    <button type="submit">Submit</button>
+</form>
 
-    <div class="section">
-      <h2>Professional Interests</h2>
-      <p>AI, Automation, Finance, Accounting, Social Work, HR, Economics, Data Science, Analytics</p>
-    </div>
+<h2>Results</h2>
+<pre id="results-output"></pre>
 
-    <div class="section">
-      <h2>Professional Positions</h2>
-      <p><strong>Since 06/2025</strong> – Founder, Independent Research Consulting</p>
-    </div>
+<script>
+const backendUrl = "https://YOUR-RENDER-APP.onrender.com"; // change this
 
-    <div class="section">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>09/2023 - 06/2025</strong> – Master of Science in Management, Stockholm University</li>
-        <li><strong>09/2024 - 12/2024</strong> – Exchange Semester, Finance & Accounting, Hanken School of Economics</li>
-        <li><strong>08/2011 - 12/2014</strong> – Bachelor of Science in Government, Minor in Mathematics, University of Miami</li>
-      </ul>
-    </div>
+document.getElementById("game-form").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    <div class="section">
-      <h2>Previous Positions</h2>
-      <ul>
-        <li><strong>06/2023 - 01/2024</strong> – Support Associate, Wolt Enterprises Oy</li>
-        <li><strong>06/2021 - 01/2022</strong> – Sales Associate, Various Companies</li>
-        <li><strong>01/2016 - 01/2017</strong> – Civilian Service, University of Helsinki, Faculty of Law</li>
-      </ul>
-    </div>
+    const formData = new FormData(this);
 
-    <div class="section">
-      <h2>Academic Interests</h2>
-      <p>Economics, Business, Political Science, Data Science, Analytics, Sovereignty</p>
-    </div>
+    fetch(`${backendUrl}/submit-ajax`, {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("results-output").textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(err => {
+        console.error(err);
+        alert("Error contacting backend");
+    });
+});
+</script>
 
-    <div class="section">
-      <h2>Volunteering Experience</h2>
-      <ul>
-        <li><strong>06/2012 - 07/2013</strong> – Summer Scholars Program, University of Miami</li>
-        <li><strong>08/2008 - 05/2010</strong> – National Honor Society, Baltimore Polytechnic Institute</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Further Education</h2>
-      <ul>
-        <li><strong>09/2019 - 06/2021</strong> – MSc in Management (Courses), Aalto University & Stockholm University</li>
-        <li><strong>08/2018 - 05/2019</strong> – MSc in Sociology, University of Helsinki</li>
-      </ul>
-    </div>
-
-    <div class="section skills">
-      <h2>Further Skills</h2>
-      <p><strong>Languages:</strong> English (Native), Finnish (Native), Chinese (Fluent), French (Basic)</p>
-      <p><strong>Expertise:</strong> MS Office, ChatGPT, AutoGPT, Python, NumPy, Azure, PearAI, Replit, Envato</p>
-      <p><strong>AI Experience:</strong> Hands-on expertise in generative AI technologies, LLMs, image generation & customization solutions</p>
-    </div>
-
-    <div class="section">
-      <h2>Recommendations</h2>
-      <ul>
-        <li><strong>Krista Salo</strong> – Monitoring Team Lead, Wolt<br>Email: krista.salo@wolt.com</li>
-        <li><strong>Resti Montoya Moreno</strong> – Senior Antenna Engineer, Huawei<br>Phone: +358409626406<br>Email: restimontoya7@gmail.com</li>
-      </ul>
-    </div>
-  </div>
 </body>
 </html>
